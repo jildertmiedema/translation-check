@@ -12,7 +12,8 @@ class TranslationCheckerServiceProvider extends ServiceProvider
 
         $this->app->bind('translation.check', function($app)
         {
-            return $app->make('JildertMiedema\TranslationCheck\TranslationCheck');
+            $loader = $app['translation.loader'];
+            return new TranslationCheck($loader);
         });
 
         $this->commands('command.checkTranslations');
