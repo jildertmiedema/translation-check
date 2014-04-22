@@ -8,8 +8,17 @@
             "email": "jildert@pimenta.nl"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "JildertMiedema\\TranslationCheck\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
     "require": {
-        "illuminate/support": "4.*"
+        "php": ">=5.3.0",
+        "illuminate/support": "~4"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*"
     }
 }
