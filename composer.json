@@ -1,0 +1,15 @@
+{
+    "name": "jildert/translation-check",
+    "description": "Checks if all translation items appear in all languages",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jildert Miedema",
+            "email": "jildert@pimenta.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "4.*"
+    }
+}
