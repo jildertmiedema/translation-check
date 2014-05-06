@@ -1,6 +1,10 @@
 {
     "name": "jildertmiedema/translation-check",
     "description": "Checks if all translation items appear in all languages",
+    "keywords": [
+        "laravel",
+        "translation"
+    ],
     "license": "MIT",
     "authors": [
         {
