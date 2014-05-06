@@ -4,7 +4,7 @@ namespace JildertMiedema\TranslationCheck;
 
 use Illuminate\Console\Command;
 
-class CheckCommand extends Command
+class CheckCommand extends Command implements OutputInterface
 {
 
     protected $checker;
@@ -28,9 +28,10 @@ class CheckCommand extends Command
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(TranslationCheck $checker)
     {
         parent::__construct();
+        $this->checker = $checker;
     }
 
     /**
@@ -40,6 +41,11 @@ class CheckCommand extends Command
      */
     public function fire()
     {
-        //
+        $this->checker->check($this);
+    }
+
+    public function output($text)
+    {
+        $this->info($text);
     }
 }

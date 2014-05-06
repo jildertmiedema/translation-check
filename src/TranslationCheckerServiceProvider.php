@@ -12,8 +12,7 @@ class TranslationCheckerServiceProvider extends ServiceProvider
 
         $this->app->bind('translation.check', function($app)
         {
-            $loader = $app['translation.loader'];
-            return new TranslationCheck($loader);
+            return new TranslationCheck($app['files'], $app['path'].'/lang');
         });
 
         $this->commands('command.checkTranslations');
