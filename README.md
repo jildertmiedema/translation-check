@@ -31,7 +31,7 @@ Changes `app.config`
 php artisan translation:check
 ```
 
-output:
+Example output:
 ```sh
 en: has no validation.count
 en: has no validation.countbetween
